@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <title>Movimentação Livre</title>
+    </head>
+    <body>
+        <h1>Movimentação Livre</h1>
+        <p>Coloque a taxa de movimentação e clique nos botões para movimentar o braço.</p>
+        <br>
+        <div>
+            <form id= "movimetacaoForms" method="post" action="/moverLivre">
+                <label for="taxa">Taxa de Movimentação:</label>
+                <input type="number" id="taxa" name="taxa" value="{{ taxa }}">
+
+                <button type="submit" name="direcao" value="X">X</button>
+                <button type="submit" name="direcao" value="Y">Y</button>
+                <button type="submit" name="direcao" value="Z">Z</button>
+                <button type="submit" name="direcao" value="R">R</button>
+            </form>
+
+            {% if mensagem %}
+                <p>{{ mensagem }}</p>
+            {% endif %}
+        </div>
+    </body>

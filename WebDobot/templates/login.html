@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <title>Página de Login</title>
+
+        {% if erro %}
+            <script type="text/javascript">
+                window.onload = function() {
+                    alert("Usuário ou senha errado");
+                };
+            </script>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Login</h1>
+        <p>Faça o login</p>
+        <div>
+            <form action="/validarLogin" method="post">
+                <input type="text" name="usuario" placeholder="Digite seu Usuário">
+                <input type="password" name="senha" placeholder="Digite sua Senha">
+                <button type="submit">Enviar</button>
+            </form>
+            <br>
+            <p>Não tem uma conta? <a href="/cadastro">Cadastrar</a></p>
+        </div>
+    </body>
+</htm>

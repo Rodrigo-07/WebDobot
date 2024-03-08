@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conectar Dobot</title>
+</head>
+<body>
+    <h1>Conectar Dobot</h1>
+
+    <form method="post" action="{{ url_for('conectarDobot') }}">
+        <label for="porta">Escolha a porta para conectar o robô:</label>
+        <select name="porta" id="porta">
+            {% for porta in portas %}
+                <option value="{{ porta }}">{{ porta }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Conectar">
+    </form>
+</body>
+</html>
